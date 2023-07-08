@@ -74,8 +74,7 @@ def merge(files, *, output, margin=20.0, spacing=0.0, keep_aspect=False):
         with open(output, 'wb') as f:
             writer.write(f)
 
-
-if __name__ == '__main__':
+def main():
     import argparse
 
     parser = argparse.ArgumentParser('Merge multiple PDF pages onto a single page')
@@ -89,3 +88,6 @@ if __name__ == '__main__':
 
     merge(args.files, output=args.output, keep_aspect=args.keep_aspect, margin=args.margin, spacing=args.spacing)
 
+
+if __name__ == '__main__':
+    main()
